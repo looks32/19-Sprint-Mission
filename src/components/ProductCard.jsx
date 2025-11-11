@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function ProductCard({ images, name, price, favorite }) {
+function ProductCard({ id, images, name, price, favorite }) {
   return (
     <ProductWrap>
-      <Link to="/">
+      <Link to={`/items/${id}`}>
         <ImageWrap>
           <img src={images} alt={name} />
         </ImageWrap>
