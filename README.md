@@ -10,9 +10,14 @@
 
 **체크리스트 [기본]**
 
+**홈**
+
+- [ ] 각 상품 클릭 시 상품 상세 페이지로 이동합니다.
+- [ ] 상품 상세 페이지 주소는 “/items/{productId}” 입니다.
+
 **상품 상세**
 
-- [ ] 상품 상세 페이지 주소는 "/items/{productId}" 입니다.
+- [x] 상품 상세 페이지 주소는 "/items/{productId}" 입니다.
 - [ ] response 로 받은 아래의 데이터로 화면을 구현합니다.
 - [ ] favoriteCount : 하트 개수
 - [ ] images : 상품 이미지
@@ -33,11 +38,18 @@
 
 ### 체크리스트 [심화]
 
-- [] 모든 버튼에 자유롭게 Hover효과를 적용하세요
+- [ ] 모든 버튼에 자유롭게 Hover효과를 적용하세요
 
 ### 수정리스트
 
-- [ ] 대기중
+- [ ] TagInput 데이터 tag?
+- [ ] usePagination currentPage 중복 제거
+- [ ] addItem form 추가
+- [ ] addItem function 줄이기?
+      unconrolled component
+      react-hook-form + zod
+      useActionState
+- [ ] Input search 수정
 
 **기본 페이지**
 
