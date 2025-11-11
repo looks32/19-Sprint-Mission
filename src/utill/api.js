@@ -10,3 +10,12 @@ export async function getProducts(page, pageSize, orderBy) {
   }
   return res.json();
 }
+
+export async function getProduct(id) {
+  const res = await fetch(`${BASE_URL}/products/${id}`);
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`${text}`);
+  }
+  return res.json();
+}
