@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-function TagList() {
+function TagList({ tags }) {
   return (
     <TagListWrap>
-      {['#아이패드 미니', '#아이패드 미니', '#아이패드 미니'].map((tag) => (
-        <li>{tag}</li>
-      ))}
+      {!tags
+        ? '태그가 없습니다.'
+        : tags.map((tag) => <li key={tag}>#{tag}</li>)}
     </TagListWrap>
   );
 }
