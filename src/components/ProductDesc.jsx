@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import TagList from './TagList';
+import Profile from './Profile';
+import Like from './Like';
 
 function ProductDesc({
   id,
@@ -25,7 +27,12 @@ function ProductDesc({
           <p>{description}</p>
           <strong>상품 태그</strong>
           <TagList tags={tags} />
-          <div>프로필 하트</div>
+          <ProfileStats>
+            <Profile />
+            <div className="line">
+              <Like />
+            </div>
+          </ProfileStats>
         </div>
       </TextArea>
     </ProductDescWrap>
@@ -40,17 +47,26 @@ const ProductDescWrap = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 24px auto 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e5e7eb;
 `;
 
 const ImgArea = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 486px;
   height: 486px;
   overflow: hidden;
   border-radius: 16px;
+  img {
+    width: auto;
+  }
 `;
 
 const TextArea = styled.div`
   margin-left: 24px;
+  width: calc(100% - 510px);
 
   .title {
     padding-bottom: 16px;
@@ -74,9 +90,22 @@ const TextArea = styled.div`
 
   .detail {
     color: #4b5563;
-    strong {
+    > strong {
       display: block;
       margin: 24px 0 15px;
     }
+  }
+`;
+
+const ProfileStats = styled.div`
+  display: flex;
+  margin-top: 62px;
+  justify-content: space-between;
+
+  .line {
+    width: 111px;
+    margin: 5px 0;
+    padding-left: 24px;
+    border-left: 1px solid #e5e7eb;
   }
 `;
