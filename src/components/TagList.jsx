@@ -3,9 +3,11 @@ import styled from 'styled-components';
 function TagList({ tags }) {
   return (
     <TagListWrap>
-      {!tags
-        ? '태그가 없습니다.'
-        : tags.map((tag) => <li key={tag}>#{tag}</li>)}
+      {!tags?.length > 0 ? (
+        <div>'태그가 없습니다.'</div>
+      ) : (
+        tags.map((tag) => <li key={tag}>#{tag}</li>)
+      )}
     </TagListWrap>
   );
 }
